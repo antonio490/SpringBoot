@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.antoniosanzc.spring.boot.token.example.authentication.ApiGatewayAutoConfig

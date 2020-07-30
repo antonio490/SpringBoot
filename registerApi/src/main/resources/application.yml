@@ -1,0 +1,20 @@
+spring.application.name: spring-boot-token-example
+server.port: 8080
+
+app:
+
+  registerEnabled: true
+  rateLimiterEnabled: true
+  # bucket capacity reduced for demo.
+  bucketCapacity: 10
+  # bucket spawn time extended for demo (one new token per second).
+  tokenSpawnTimeInMillis: 1000
+  authenticationMapping: /register
+  authenticationEndpoint: http://localhost:8080/spring-boot-token-example/register
+  tokenTimeToLiveInSeconds: 300
+  secret: B^#vdaD$ZEM8j<>
+  keyAlgorithm: AES
+  publicEndpoints:
+    - /tt-service-notification-issues/register
+login.users:
+  admin: 1234
